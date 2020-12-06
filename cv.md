@@ -49,6 +49,7 @@ July, 2020 – Present
 
 ### UM-OIG Project: High-dose Opioid Transaction Prediction and U.S. Medicaid Pharmacy Fraudulence Risk Evaluation
 May, 2020 – Sept. 2020
+
 *Research Assistant*
 
 - Processed ∼500M transaction data from the Michigan Department of Health and Human Service, derived
