@@ -13,13 +13,13 @@ title: CV
 
 ### **University of Michigan**, Ann Arbor, MI
 
-*Master of Science* in Applied Statistics \- May, 2021 (expected)
+*Master of Science* in Applied Statistics: May, 2021 (expected)
 
 *Courses* Statistical Learning, Machine Learning, Data Science in Python, Linear Models, Statistical Inference
 
 ### Fudan University, Shanghai, PRC
 
-*Bachelor of Science* in Mathematics and Applied Mathematics \- June, 2019
+*Bachelor of Science* in Mathematics and Applied Mathematics: June, 2019
 
 *Courses* Mathematical Analysis, Linear Algebra, Real Analysis, Ordinary Differential Equations, Probability
 Theory, Statistical Learning, Linear and Non-linear Programming
