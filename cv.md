@@ -3,8 +3,6 @@ layout: page
 title: CV
 ---
 
-#  <img src="/assets/img/avatar-icon.png" style="zoom:33%;" />
-
 #  TIANQI CHEN 
 
 ---
