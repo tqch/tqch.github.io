@@ -11,15 +11,15 @@ title: CV
 
 ---
 
-### **University of Michigan**
-Ann Arbor, MI   May, 2021 (expected)
+### **University of Michigan**, Ann Arbor, MI
+May, 2021 (expected)
 
 *Master of Science* in Applied Statistics
 
 *Courses* Statistical Learning, Machine Learning, Data Science in Python, Linear Models, Statistical Inference
 
-### Fudan University
-Shanghai, PRC    June, 2019
+### Fudan University, Shanghai, PRC
+June, 2019
 
 *Bachelor of Science* in Mathematics and Applied Mathematics
 
@@ -83,8 +83,8 @@ May, 2020 - Present
 
 *Course Grader* 
 
-### Oriental Cable Network Co. Ltd.
-Shanghai, PRC   July, 2017 – Aug, 2017
+### Oriental Cable Network Co. Ltd., Shanghai, PRC
+July, 2017 – Aug, 2017
 
 *Data Analyst*
 
