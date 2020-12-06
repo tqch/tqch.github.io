@@ -9,7 +9,7 @@
 title: My Website
 
 # Your name to show in the footer
-author: Some Person
+author: Tianqi Chen
 
 # --- List of links in the navigation bar --- #
 
@@ -39,9 +39,9 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "tqch2020@gmail.com"
   facebook: deanattali
-  github: daattali
+  github: tqch
   twitter: daattali
   patreon: DeanAttali
   youtube: c/daattali
@@ -64,7 +64,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Tianqi Chen's Personal Website
 
 # --- General options --- #
 
