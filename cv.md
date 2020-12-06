@@ -1,13 +1,4 @@
----
-layout: page
-title: CV
----
-
-
-
-<img src=".\assets\img\avatar-icon.png" alt="Profile" style="zoom:33%;" />
-
-#  TIANQI CHEN 
+#  TIANQI CHEN <img src=".\assets\img\avatar-icon.png" alt="Profile" style="zoom:50%;" />
 
 ---
 
