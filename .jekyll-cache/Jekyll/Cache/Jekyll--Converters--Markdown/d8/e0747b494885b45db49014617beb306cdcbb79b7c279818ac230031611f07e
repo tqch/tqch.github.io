@@ -1,0 +1,100 @@
+I"2<h1 id="tianqi-chen"> TIANQI CHEN</h1>
+
+<hr />
+
+<h2 id="school-education">:school: Education</h2>
+
+<hr />
+
+<h3 id="university-of-michigan-ann-arbor-mi"><strong>University of Michigan</strong>, Ann Arbor, MI</h3>
+
+<p>Sept 2019 - Apr 2021</p>
+
+<p><em>Master of Science</em> in Applied Statistics		<strong>GPA: 4.0/4.0​</strong></p>
+
+<p><em>Courses</em> Statistical Learning, Machine Learning, Data Science in Python, Linear Models, Statistical Inference</p>
+
+<h3 id="fudan-university-shanghai-prc">Fudan University, Shanghai, PRC</h3>
+
+<p>Sept 2015 - June 2019</p>
+
+<p><em>Bachelor of Science</em> in Mathematics and Applied Mathematics		<strong>GPA: 3.2/4.0​</strong></p>
+
+<p><em>Courses</em> Mathematical Analysis, Linear Algebra, Real Analysis, Ordinary Differential Equations, Probability Theory, Statistical Learning, Convex Optimization</p>
+
+<h2 id="rocket-projects">:rocket: Projects</h2>
+
+<h3 id="rails-robust-adversarial-immune-learning-system-arxiv">RAILS: Robust Adversarial Immune Learning System <a href="https://arxiv.org/pdf/2012.10485.pdf">[arXiv]</a></h3>
+
+<p>July, 2020 – Present</p>
+
+<p><em>Research Assistant</em></p>
+
+<ul>
+  <li>
+    <p>Participated in the proposal of a novel immune system inspired adversarial learning algorithm, implemented and tested the architecture in pytorch;</p>
+  </li>
+  <li>
+    <p>Experimented on the model initialization mechanisms, affinity measurements and multiple hyperparameter settings, accelerated and stablized the affinity maturation simulation process;</p>
+  </li>
+  <li>
+    <p>Compared RAILS and DkNN defenses both under white-box attacks (PGD) on CNN and under black-box attacks (ZOO &amp; HopSkipJump) on the whole architecture, the novel algorithm outperformed its counterparts in adversarial cases and preserved accuracy given the clean inputs.</p>
+  </li>
+</ul>
+
+<h3 id="um-oig-project-high-dose-opioid-transaction-prediction-and-us-medicaid-pharmacy-fraudulence-risk-evaluation">UM-OIG Project: High-dose Opioid Transaction Prediction and U.S. Medicaid Pharmacy Fraudulence Risk Evaluation</h3>
+<p>May 2020 – Sept. 2020</p>
+
+<p><em>Research Assistant</em></p>
+
+<ul>
+  <li>Processed ∼500M transaction data from the Michigan Department of Health and Human Service, derived predictor variables including morphine milligram equivalents and opioid-involved overdose death rate by CDC prescription guideline and Michigan demographic data</li>
+  <li>Investigated the relationship between high-dose opioid transaction with factors such as pharmacy ownership, geographical location and patient composition with weighted least square linear models</li>
+  <li>Built three models using standard logistic regression, random forest and non-ignorable missing data methods (Ibrahim and Lipsitz algorithm with Firth penalty) and compared the model performances on the hold-out set</li>
+</ul>
+
+<h3 id="jpmorgan-shanghai-research-project-pension-products">JPMorgan Shanghai Research Project: Pension Products</h3>
+<p>May 2018 – Apr 2019</p>
+
+<p><em>Research Assistant</em></p>
+
+<ul>
+  <li>Collected and analyzed seasonal data from 1974 to 2018</li>
+  <li>Established Multiple Linear Regression model of the investment of American Pension Fund account on mutual funds with regard to several economic factors</li>
+  <li>Interpreted the model and found out the influence of U.S. economy and policies on the pension funds size</li>
+</ul>
+
+<h2 id="briefcase-work-experiences">:briefcase: Work Experiences</h2>
+
+<hr />
+
+<h3 id="department-of-statistics-unversity-of-michigan">Department of Statistics, Unversity of Michigan</h3>
+<p>May 2020 - Present</p>
+
+<p><em>Graduate Student Instructor</em></p>
+
+<p><em>Course Grader</em></p>
+
+<h3 id="oriental-cable-network-co-ltd-shanghai-prc">Oriental Cable Network Co. Ltd., Shanghai, PRC</h3>
+<p>July 2017 – Aug 2017</p>
+
+<p><em>Data Analyst</em></p>
+
+<ul>
+  <li>Surveyed on the users’ from 1098 families by questionnaires about online education platforms and completed the EDA;</li>
+  <li>Built a Logistic Regression model to predict the customers’ willingness to pay for the education programs with respect to family information and program format.</li>
+</ul>
+
+<h2 id="gear-skills">:gear: Skills</h2>
+
+<hr />
+
+<h3 id="programming">Programming</h3>
+
+<p>proficient in <strong>Python</strong> familiar with <strong>NumPy</strong>, <strong>pandas</strong>, <strong>scikit-learn</strong>, experienced in <strong>TensorFlow</strong> and <strong>PyTorch</strong>; proficient in <strong>R, SQL</strong></p>
+
+<h3 id="language">Language</h3>
+
+<p><strong>Chinese</strong> (native), <strong>English</strong> (fluent), <strong>Japanese</strong> (intermediate)</p>
+
+:ET
