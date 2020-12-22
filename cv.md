@@ -11,47 +11,48 @@ title: CV
 
 ---
 
-### **University of Michigan**	$\small\text{Ann Arbor, MI}\quad\text{May, 2021 (expected)}$
+### **University of Michigan**, Ann Arbor, MI		
 
-*Master of Science* in Applied Statistics		$\mathbf{GPA}: 4.0/4.0$
+Sept 2019 - Apr 2021
+
+*Master of Science* in Applied Statistics		**GPA: 4.0/4.0​**
 
 *Courses* Statistical Learning, Machine Learning, Data Science in Python, Linear Models, Statistical Inference
 
-### Fudan University	$\small\text{Shanghai, PRC}\quad\text{June, 2019}$
+### Fudan University, Shanghai, PRC		
 
-*Bachelor of Science* in Mathematics and Applied Mathematics		$\mathbf{GPA}: 3.2/4.0$
+Sept 2015 - June 2019
 
-*Courses* Mathematical Analysis, Linear Algebra, Real Analysis, Ordinary Differential Equations, Probability
-Theory, Statistical Learning, Linear and Non-linear Programming
+*Bachelor of Science* in Mathematics and Applied Mathematics		**GPA: 3.2/4.0​**
+
+*Courses* Mathematical Analysis, Linear Algebra, Real Analysis, Ordinary Differential Equations, Probability Theory, Statistical Learning, Convex Optimization
 
 ## :rocket: Projects
 
----
+### RAILS: Robust Adversarial Immune Learning System [[arXiv]](https://arxiv.org/pdf/2012.10485.pdf)
 
-### RAILS: Robust Adversarial Immune Learning System [[arXiv]](https://arxiv.org/pdf/2012.10485.pdf)    $\small\text{July, 2020 – Present}$
+July, 2020 – Present
 
 *Research Assistant*
 
-- Participated in the proposal of a novel immune system inspired adversarial learning algorithm, implemented
-  and tested the architecture in pytorch;
+- Participated in the proposal of a novel immune system inspired adversarial learning algorithm, implemented and tested the architecture in pytorch;
+  
+-  Experimented on the model initialization mechanisms, affinity measurements and multiple hyperparameter settings, accelerated and stablized the affinity maturation simulation process;
+  
+- Compared RAILS and DkNN defenses both under white-box attacks (PGD) on CNN and under black-box attacks (ZOO & HopSkipJump) on the whole architecture, the novel algorithm outperformed its counterparts in adversarial cases and preserved accuracy given the clean inputs.
+  
 
--  Experimented on the model initialization mechanisms, affinity measurements and multiple hyperparameter
-  settings, accelerated and stablized the affinity maturation simulation process;
+### UM-OIG Project: High-dose Opioid Transaction Prediction and U.S. Medicaid Pharmacy Fraudulence Risk Evaluation
+May 2020 – Sept. 2020
 
-- Compared RAILS and DkNN defenses both under white-box attacks (PGD) on CNN and under black-box
-  attacks (ZOO & HopSkipJump) on the whole architecture, the novel algorithm outperformed its counter-
-  parts in adversarial cases and preserved accuracy given the clean inputs.
-
-  *The paper is currently under review of AISTATS 2021*
-
-### UM-OIG Project: High-dose Opioid Transaction Prediction and U.S. Medicaid Pharmacy Fraudulence Risk Evaluation    $\small\text{May, 2020 – Sept. 2020}$
 *Research Assistant*
 
 - Processed ∼500M transaction data from the Michigan Department of Health and Human Service, derived predictor variables including morphine milligram equivalents and opioid-involved overdose death rate by CDC prescription guideline and Michigan demographic data
 - Investigated the relationship between high-dose opioid transaction with factors such as pharmacy ownership, geographical location and patient composition with weighted least square linear models
 - Built three models using standard logistic regression, random forest and non-ignorable missing data methods (Ibrahim and Lipsitz algorithm with Firth penalty) and compared the model performances on the hold-out set
 
-### JPMorgan Shanghai Research Project: Pension Products    $\small\text{May, 2018 – Apr, 2019}$
+### JPMorgan Shanghai Research Project: Pension Products
+May 2018 – Apr 2019
 
 *Research Assistant*
 
@@ -63,13 +64,15 @@ Theory, Statistical Learning, Linear and Non-linear Programming
 
 ---
 
-### Department of Statistics, Unversity of Michigan	$\small\text{May, 2020 - Present}$
+### Department of Statistics, Unversity of Michigan
+May 2020 - Present
 
 *Graduate Student Instructor*
 
 *Course Grader* 
 
-### Oriental Cable Network Co. Ltd. 	$\small\text{Shanghai, PRC}\quad\text{July, 2017 – Aug, 2017}$
+### Oriental Cable Network Co. Ltd., Shanghai, PRC
+July 2017 – Aug 2017
 
 *Data Analyst*
 
