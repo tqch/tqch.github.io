@@ -212,6 +212,8 @@ defaults:
     values:
       layout: "page"
 
+exclude: [vendor]
+
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
