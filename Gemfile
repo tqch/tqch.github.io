@@ -25,3 +25,6 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'hawkins'
 end
+
+# Running on Windows with 64-bit version of Ruby
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
