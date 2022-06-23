@@ -9,33 +9,28 @@ redirect_from:
 
 {% include base_path %}
 
-#  TIANQI CHEN 
+# TIANQI	CHEN 
 
-
-
-## :classical_building: Education
-
+## 🏛️ Education
 ---
 
 ### University of Texas at Austin	Austin, TX
 
 Aug 2022 - May 2026
-
 *PhD* in Statistics
 
 ### University of Michigan	Ann Arbor, MI		
 
 Sept 2019 - Apr 2021
-
 *Master of Science* in Applied Statistics
 
 ### Fudan University	Shanghai, PRC	
 
 Sept 2015 - June 2019
-
 *Bachelor of Science* in Mathematics and Applied Mathematics
 
-## :open_book: Publications and preprints
+## 📖 Publications and preprints
+---
 
 ### ASK: Adversarial Soft k-Nearest Neighbor Attack and Defense [[arxiv]](https://arxiv.org/pdf/2106.14300.pdf)
 *under review*
@@ -56,7 +51,8 @@ Sept 2015 - June 2019
 - We  proposed a novel adversarial learning framework inspired by mammalian immune  system, which is agnostic to backbone neural network architectures and adaptive  to unseen attacks.
 - We  also empirically showed that RAILS can improve the robustness of DNN  classifiers with different model structures (e.g., VGG16 and ResNet18) and  various SOTA adversarial attacks (e.g., CW, PGD, Square and HopSkipJump).  
 
-## :rocket: Projects
+## 🚀 Projects
+---
 
 ### GARD: Guaranteeing AI Robustness Against Deception 
 *Research Assistant*	July, 2020 – Present
@@ -72,29 +68,21 @@ Sept 2015 - June 2019
 - Investigated the relationship between high-dose opioid transaction with factors such as pharmacy ownership, geographical location and patient composition with weighted least square linear models.
 - Built three models using standard logistic regression, random forest and non-ignorable missing data methods (Ibrahim and Lipschitz algorithm with Firth penalty) and compared the model performances on the hold-out set.
 
-  
-
-## :briefcase: Work Experiences
-
+## 💼 Work Experiences
 ---
 
 ### Department of Information, Risk and Operations Management, University of Texas at Austin
 
 *Teaching Assistant*	Sept 2021 - Present
-
 *Student Technician*	June 2021 - Aug 2021
 
 ### Department of Statistics, University of Michigan
 
 *Research Affiliate*	May 2021 - May 2022
-
 *Graduate Student Instructor*	Aug 2020 - May 2021
-
 *Course Grader*	May 2020 - Aug 2020
 
-
-
-## :gear: Skills
+## ⚙️ Skills
 
 ---
 
@@ -102,7 +90,7 @@ Sept 2015 - June 2019
 
 proficient in **Python, R, SQL** 
 
-### ML/DL
+### ML / DL
 
 familiar with **NumPy**, **pandas**, **scikit-learn**, experienced in **TensorFlow** and **PyTorch**
 
