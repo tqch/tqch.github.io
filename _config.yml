@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Tianqi Chen"
-  avatar           : "profile.png"
+  avatar           : "portrait.jpeg"
   bio              : "PhD student in Statistics at UT-Austin; A Deep Learning enthusiast :)"
   location         : "Austin, TX"
   employer         :
@@ -265,6 +265,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jemoji
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate

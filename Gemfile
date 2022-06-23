@@ -24,6 +24,8 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem 'hawkins'
+  # enable emoji on github-pages
+  gem 'jemoji'
 end
 
 # Running on Windows with 64-bit version of Ruby

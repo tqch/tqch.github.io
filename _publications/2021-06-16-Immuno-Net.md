@@ -10,5 +10,3 @@ citation: 'Wang, R., Chen, T., Lindsly, S., Stansbury, C., Rajapakse, I. and Her
 ---
 
 [Download paper here](http://tqch.github.io/files/Immuno-mimetic_Deep_Neural_Networks_Immuno-Net.pdf)
-
-Recommended citation: Wang, R., Chen, T., Lindsly, S., Stansbury, C., Rajapakse, I. and Hero, A., 2021. Immuno-mimetic Deep Neural Networks (Immuno-Net). arXiv preprint arXiv:2107.02842.
