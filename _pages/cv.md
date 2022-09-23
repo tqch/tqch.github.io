@@ -16,7 +16,7 @@ redirect_from:
 
 ### University of Texas at Austin	Austin, TX
 
-Aug 2022 - May 2026
+Aug 2021 - May 2026
 *PhD* in Statistics
 
 ### University of Michigan	Ann Arbor, MI		
