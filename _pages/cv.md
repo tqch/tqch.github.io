@@ -14,7 +14,7 @@ redirect_from:
 ## 🏛️ Education
 ---
 
-### University of Texas at Austin	Austin, TX
+### University of Texas at Austin Austin, TX
 
 Aug 2021 - May 2026
 *PhD* in Statistics
