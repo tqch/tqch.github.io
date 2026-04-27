@@ -1,4 +1,224 @@
-<script src="{{ base_path }}/assets/js/main.min.js"></script>
+{% include base_path %}
+
+<script>
+(function () {
+  // Sticky nav shadow on scroll
+  var mast = document.getElementById('masthead');
+  if (mast) {
+    var onScroll = function () {
+      mast.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('primary-nav');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') menu.classList.remove('is-open');
+    });
+  }
+
+  // Reveal on scroll
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // ---------- Diffusion canvas hero ----------
+  // Halftone-as-rest, hover-denoises-to-clean.
+  // Two source images: the halftone (default, privacy-preserving) and a
+  // moderately downscaled clean photo (the "denoised" target). Hover
+  // smoothly blends halftone → clean while a brief sepia shimmer peaks at
+  // the midpoint — visualizing the model's uncertainty during inference.
+  var card = document.querySelector('[data-diffusion]');
+  if (!card) return;
+
+  var canvas = card.querySelector('canvas');
+  var stepEl = card.querySelector('[data-step]');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var srcHalftone = card.getAttribute('data-src');
+  var srcClean    = card.getAttribute('data-src-clean');
+
+  var W = 384, H = 384;
+  var workH = document.createElement('canvas'); workH.width = W; workH.height = H;
+  var workC = document.createElement('canvas'); workC.width = W; workC.height = H;
+  var wctxH = workH.getContext('2d');
+  var wctxC = workC.getContext('2d');
+  canvas.width = W; canvas.height = H;
+
+  var halftoneData = null;
+  var cleanData = null;
+  var rafId = null;
+  var lastFrame = 0;
+
+  var SEPIA_MEAN_R = 116, SEPIA_MEAN_G = 84, SEPIA_MEAN_B = 50;
+
+  function gaussian() {
+    var u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
+
+  function clamp(x) { return x < 0 ? 0 : x > 255 ? 255 : x; }
+
+  function renderStep(alpha) {
+    if (!halftoneData || !cleanData) return;
+    var hData = halftoneData.data;
+    var cData = cleanData.data;
+    var out = ctx.createImageData(W, H);
+    var d = out.data;
+    var len = hData.length;
+
+    var shimmer = 4 * alpha * (1 - alpha);
+    var sigma = 28 * shimmer;
+    var biasMix = 0.18 * shimmer;
+
+    for (var i = 0; i < len; i += 4) {
+      var ca = cData[i + 3] / 255;
+      var mix = alpha * ca;
+      var inv = 1 - mix;
+
+      var r = inv * hData[i]   + mix * cData[i];
+      var g = inv * hData[i+1] + mix * cData[i+1];
+      var b = inv * hData[i+2] + mix * cData[i+2];
+
+      if (sigma > 0.5) {
+        var n = sigma * gaussian();
+        r += n * 1.05;
+        g += n * 0.95;
+        b += n * 0.80;
+        r = r * (1 - biasMix) + SEPIA_MEAN_R * biasMix;
+        g = g * (1 - biasMix) + SEPIA_MEAN_G * biasMix;
+        b = b * (1 - biasMix) + SEPIA_MEAN_B * biasMix;
+      }
+
+      d[i]   = clamp(r);
+      d[i+1] = clamp(g);
+      d[i+2] = clamp(b);
+      d[i+3] = 255;
+    }
+    ctx.putImageData(out, 0, 0);
+
+    if (stepEl) stepEl.textContent = 't = ' + Math.round(1000 * (1 - alpha));
+  }
+
+  function bakeImage(img, wctx, fillBg) {
+    var iw = img.width, ih = img.height;
+    var ratio = Math.max(W / iw, H / ih);
+    var dw = iw * ratio, dh = ih * ratio;
+    var dx = (W - dw) / 2, dy = (H - dh) / 2;
+    if (fillBg) {
+      wctx.fillStyle = fillBg;
+      wctx.fillRect(0, 0, W, H);
+    } else {
+      wctx.clearRect(0, 0, W, H);
+    }
+    wctx.drawImage(img, dx, dy, dw, dh);
+    return wctx.getImageData(0, 0, W, H);
+  }
+
+  // ----- animation: drive currentAlpha to a target between 0 and 1 -----
+  var currentAlpha = 0;
+  var animStart = 0, animFrom = 0, animTo = 0, animDur = 0;
+
+  function animateTo(target, duration) {
+    cancelAnimationFrame(rafId);
+    if (reduceMotion) {
+      currentAlpha = target;
+      renderStep(currentAlpha);
+      return;
+    }
+    animStart = performance.now();
+    animFrom = currentAlpha;
+    animTo = target;
+    animDur = Math.max(1, duration | 0);
+    rafId = requestAnimationFrame(stepFrame);
+  }
+
+  function stepFrame(now) {
+    var p = Math.min(1, (now - animStart) / animDur);
+    var eased = 1 - Math.pow(1 - p, 3);
+    currentAlpha = animFrom + (animTo - animFrom) * eased;
+    if (now - lastFrame > 33) {
+      renderStep(currentAlpha);
+      lastFrame = now;
+    }
+    if (p < 1) {
+      rafId = requestAnimationFrame(stepFrame);
+    } else {
+      currentAlpha = animTo;
+      renderStep(currentAlpha);
+    }
+  }
+
+  function loadImage(src) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.decoding = 'async';
+      img.onload = function () { resolve(img); };
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  ctx.fillStyle = '#f0e6d0';
+  ctx.fillRect(0, 0, W, H);
+  if (stepEl) stepEl.textContent = 't = 1000';
+
+  Promise.all([loadImage(srcHalftone), srcClean ? loadImage(srcClean) : Promise.resolve(null)])
+    .then(function (imgs) {
+      halftoneData = bakeImage(imgs[0], wctxH, '#f0e6d0');
+      if (imgs[1]) {
+        cleanData = bakeImage(imgs[1], wctxC, null);
+      } else {
+        cleanData = halftoneData;
+      }
+      currentAlpha = 0;
+      renderStep(0);
+    })
+    .catch(function () {
+      // Soft failure: cream square stays.
+    });
+
+  function onEnter() {
+    if (!halftoneData || !cleanData) return;
+    card.classList.add('is-clear');
+    animateTo(1, 850);
+  }
+  function onLeave() {
+    if (!halftoneData || !cleanData) return;
+    card.classList.remove('is-clear');
+    animateTo(0, 1100);
+  }
+
+  card.addEventListener('mouseenter', onEnter);
+  card.addEventListener('mouseleave', onLeave);
+  card.addEventListener('click', onEnter);
+  card.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    if (card.classList.contains('is-clear')) onLeave(); else onEnter();
+  }, { passive: false });
+})();
+</script>
 
 {% include analytics.html %}
-{% include /comments-providers/scripts.html %}

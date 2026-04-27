@@ -1,21 +1,23 @@
 {% include base_path %}
 
 <meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f0e6d0">
+<meta name="color-scheme" content="light">
 
 {% include seo.html %}
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fonts: Geist (sans), Geist Mono, Newsreader (heritage serif w/ italic) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,400..600&display=swap">
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
+<!-- Stylesheet -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
-<meta http-equiv="cleartype" content="on">
+<!-- Favicon: burnt-orange to indigo sunset -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23bf5700'%2F%3E%3Cstop offset='55%25' stop-color='%238c3b2a'%2F%3E%3Cstop offset='100%25' stop-color='%233b4d6b'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'%2F%3E%3Ccircle cx='16' cy='16' r='6' fill='%23f0e6d0'%2F%3E%3C%2Fsvg%3E">
