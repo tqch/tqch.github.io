@@ -22,13 +22,10 @@ redirect_from:
     </p>
 
     <div class="hero__cta">
-      <a class="btn btn--primary" href="{{ base_path }}/files/resume.pdf">
-        Download PDF
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v14"/><polyline points="6 11 12 17 18 11"/><path d="M5 21h14"/></svg>
-      </a>
-      <a class="btn" href="mailto:tqch@utexas.edu">tqch@utexas.edu</a>
+      <a class="btn btn--primary" href="mailto:tqch@utexas.edu">tqch@utexas.edu</a>
       <a class="btn" href="https://scholar.google.com/citations?user=jucvWbcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       <a class="btn" href="https://github.com/tqch" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/tianqi-chen-4875671a3/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>

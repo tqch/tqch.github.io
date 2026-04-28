@@ -43,8 +43,8 @@ redirect_from:
         </div>
 
         <div class="hero__cta">
-          <a class="btn btn--primary" href="{{ base_path }}/files/resume.pdf">
-            CV / Résumé
+          <a class="btn btn--primary" href="{{ base_path }}/cv/">
+            View CV
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
           </a>
           <a class="btn" href="{{ base_path }}/publications/">Publications</a>
